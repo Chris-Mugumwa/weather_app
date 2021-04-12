@@ -1,0 +1,77 @@
+@use './scss/abstracts' as *;
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', 'Lora', sans-serif;
+	font-weight: 700;
+	margin: 0 auto;
+	padding: 2rem;
+    max-height: 100vh;
+	background-image: radial-gradient(
+			circle at 61% 52%,
+			hsla(291, 0%, 0%, 0.1) 0%,
+			hsla(291, 0%, 0%, 0.1) 33%,
+			transparent 33%,
+			transparent 75%,
+			transparent 75%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 5% 13%,
+			hsla(291, 0%, 0%, 0.1) 0%,
+			hsla(291, 0%, 0%, 0.1) 10%,
+			transparent 10%,
+			transparent 33%,
+			transparent 33%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 5% 80%,
+			hsla(291, 0%, 0%, 0.1) 0%,
+			hsla(291, 0%, 0%, 0.1) 54%,
+			transparent 54%,
+			transparent 89%,
+			transparent 89%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 77% 51%,
+			hsla(291, 0%, 0%, 0.1) 0%,
+			hsla(291, 0%, 0%, 0.1) 38%,
+			transparent 38%,
+			transparent 68%,
+			transparent 68%,
+			transparent 100%
+		),
+		radial-gradient(
+			circle at 95% 94%,
+			hsla(291, 0%, 0%, 0.1) 0%,
+			hsla(291, 0%, 0%, 0.1) 56%,
+			transparent 56%,
+			transparent 59%,
+			transparent 59%,
+			transparent 100%
+		),
+		linear-gradient(135deg, rgb(131, 104, 246), rgb(2, 148, 192));
+
+
+	@include respond(tab-port) {
+		max-width: 768px;
+	}
+
+	@include respond(desktop) {
+		max-width: 1200px;
+	}
+}

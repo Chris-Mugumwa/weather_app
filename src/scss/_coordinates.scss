@@ -1,0 +1,110 @@
+@use './abstracts' as *;
+
+.coordinates {
+	background-image: linear-gradient(
+			22.5deg,
+			rgba(67, 67, 67, 0.02) 0%,
+			rgba(67, 67, 67, 0.02) 29%,
+			rgba(47, 47, 47, 0.02) 29%,
+			rgba(47, 47, 47, 0.02) 37%,
+			rgba(23, 23, 23, 0.02) 37%,
+			rgba(23, 23, 23, 0.02) 55%,
+			rgba(182, 182, 182, 0.02) 55%,
+			rgba(182, 182, 182, 0.02) 69%,
+			rgba(27, 27, 27, 0.02) 69%,
+			rgba(27, 27, 27, 0.02) 71%,
+			rgba(250, 250, 250, 0.02) 71%,
+			rgba(250, 250, 250, 0.02) 100%
+		),
+		linear-gradient(
+			67.5deg,
+			rgba(117, 117, 117, 0.02) 0%,
+			rgba(117, 117, 117, 0.02) 14%,
+			rgba(199, 199, 199, 0.02) 14%,
+			rgba(199, 199, 199, 0.02) 40%,
+			rgba(33, 33, 33, 0.02) 40%,
+			rgba(33, 33, 33, 0.02) 48%,
+			rgba(135, 135, 135, 0.02) 48%,
+			rgba(135, 135, 135, 0.02) 60%,
+			rgba(148, 148, 148, 0.02) 60%,
+			rgba(148, 148, 148, 0.02) 95%,
+			rgba(53, 53, 53, 0.02) 95%,
+			rgba(53, 53, 53, 0.02) 100%
+		),
+		linear-gradient(
+			135deg,
+			rgba(190, 190, 190, 0.02) 0%,
+			rgba(190, 190, 190, 0.02) 6%,
+			rgba(251, 251, 251, 0.02) 6%,
+			rgba(251, 251, 251, 0.02) 18%,
+			rgba(2, 2, 2, 0.02) 18%,
+			rgba(2, 2, 2, 0.02) 27%,
+			rgba(253, 253, 253, 0.02) 27%,
+			rgba(253, 253, 253, 0.02) 49%,
+			rgba(128, 128, 128, 0.02) 49%,
+			rgba(128, 128, 128, 0.02) 76%,
+			rgba(150, 150, 150, 0.02) 76%,
+			rgba(150, 150, 150, 0.02) 100%
+		),
+		linear-gradient(90deg, #ffffff, #ffffff);
+
+	&__icon-container {
+		height: 16rem;
+		display: flex;
+		justify-content: center;
+		padding: 0.5rem;
+
+		@include respond(tab-port) {
+			margin-bottom: 1.5rem;
+		}
+
+		@include respond(tab-land) {
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	&__icon {
+		width: 80%;
+		height: 80%;
+	}
+
+	&__information {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0.5rem 0.8rem;
+	}
+
+	&__lon,
+	&__lat {
+		color: rgb(83, 80, 80);
+
+		@include respond(tab-port) {
+			font-size: 1.2rem;
+			letter-spacing: 0.1rem;
+		}
+
+		@include respond(desktop) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&--info {
+		display: block;
+		text-align: center;
+		margin-top: 0.5rem;
+		color: #fc4a1a;
+
+		@include respond(tab-port) {
+			font-size: 1.1rem;
+		}
+
+		@include respond(desktop) {
+			font-size: 1.4rem;
+		}
+	}
+
+	@include respond(tab-port) {
+		width: 45%;
+	}
+}

@@ -30,102 +30,6 @@ body {
   }
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
-}
-.header__heading {
-  font-family: "Montserrat";
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.8rem;
-  max-width: 748px;
-  background-image: linear-gradient(to right, #fc4a1a, #f7b733);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@media screen and (min-width: 46.75em) {
-  .header__heading {
-    font-size: 3.5rem;
-  }
-}
-@media screen and (min-width: 56.25em) {
-  .header__heading {
-    font-size: 4rem;
-  }
-}
-@media screen and (min-width: 75em) {
-  .header__heading {
-    font-size: 5rem;
-  }
-}
-.header__input-container {
-  width: 100%;
-}
-.header__input-form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header__input-form > * {
-  margin-top: 1.5rem;
-}
-@media screen and (min-width: 75em) {
-  .header__input-form > * {
-    margin-top: 2.5rem;
-  }
-}
-.header__input {
-  border: none;
-  padding: 1rem 2rem;
-  width: 80%;
-  max-width: 80%;
-  border-radius: 100px;
-  outline: none;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.795);
-  font-size: 1.6rem;
-}
-.header__input:placeholder-shown {
-  color: rgba(204, 204, 204, 0.1);
-  letter-spacing: 0.2rem;
-  font-size: 1rem;
-}
-@media screen and (min-width: 56.25em) {
-  .header__input:placeholder-shown {
-    font-size: 1.3rem;
-  }
-}
-.header__icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 50%;
-  margin-left: 0.5rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.header__icon-container:hover {
-  background-color: #f7b733;
-}
-.header__icon-container:active {
-  background-color: #fc4a1a;
-}
-.header__icon {
-  height: 1.5rem;
-}
-
 .container {
   padding: 0.8rem;
   margin-top: 0.5rem;
@@ -471,6 +375,102 @@ body {
   }
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+}
+.header__heading {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.8rem;
+  max-width: 748px;
+  background-image: linear-gradient(to right, #fc4a1a, #f7b733);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 46.75em) {
+  .header__heading {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 56.25em) {
+  .header__heading {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .header__heading {
+    font-size: 5rem;
+  }
+}
+.header__input-container {
+  width: 100%;
+}
+.header__input-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__input-form > * {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 75em) {
+  .header__input-form > * {
+    margin-top: 2.5rem;
+  }
+}
+.header__input {
+  border: none;
+  padding: 1rem 2rem;
+  width: 80%;
+  max-width: 80%;
+  border-radius: 100px;
+  outline: none;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.795);
+  font-size: 1.6rem;
+}
+.header__input:placeholder-shown {
+  color: rgba(204, 204, 204, 0.1);
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 56.25em) {
+  .header__input:placeholder-shown {
+    font-size: 1.3rem;
+  }
+}
+.header__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.header__icon-container:hover {
+  background-color: #f7b733;
+}
+.header__icon-container:active {
+  background-color: #fc4a1a;
+}
+.header__icon {
+  height: 1.5rem;
+}
+
 .wind {
   background-image: linear-gradient(0deg, transparent 0%, transparent 58%, rgba(104, 104, 104, 0.05) 58%, rgba(104, 104, 104, 0.05) 92%, transparent 92%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 34%, rgba(104, 104, 104, 0.05) 34%, rgba(104, 104, 104, 0.05) 77%, transparent 77%, transparent 100%), linear-gradient(0deg, transparent 0%, transparent 33%, rgba(104, 104, 104, 0.05) 33%, rgba(104, 104, 104, 0.05) 53%, transparent 53%, transparent 100%), linear-gradient(90deg, white, white);
 }
@@ -601,4 +601,6 @@ body {
   }
 }
 
-/*# sourceMappingURL=/main.443603a9.css.map */
+
+
+/*# sourceMappingURL=/main.39afc03c.297f0da0.css.map */

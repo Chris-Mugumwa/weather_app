@@ -1,3 +1,4 @@
+const form = document.querySelector('.header__input-form');
 const inputField = document.querySelector('.header__input');
 const searchBtn = document.querySelector('.header__icon-container');
 const location = document.querySelector('.main__location');
@@ -20,7 +21,7 @@ let appId = 'a16a8ef1f58973f765eaeb26936caac3';
 
 export const reqFunction = () => {
 	searchBtn.addEventListener('click', event => {
-		event.preventDefault();
+        event.preventDefault();
 		destinationID = inputField.value;
 		finalUrl = `${url}${destinationID}&appid=${appId}`;
 		fetchReq();

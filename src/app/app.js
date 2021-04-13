@@ -15,7 +15,7 @@ const latCoord = document.querySelector('.coordinates--lat');
 const lonCoord = document.querySelector('.coordinates--lon');
 
 let finalUrl;
-let url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+let url = 'https://api.openweathermap.org/data/2.5/weather?q=';
 let destinationID;
 let appId = 'a16a8ef1f58973f765eaeb26936caac3';
 

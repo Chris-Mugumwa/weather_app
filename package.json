@@ -7,7 +7,8 @@
     "clean": "rm dist/bundle.js",
     "start": "parcel index.html",
     "build": "babel src -d lib",
-    "production": "parcel build src/index.html"
+    "production": "parcel build index.html",
+    "test": "parcel dist/index.html"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",

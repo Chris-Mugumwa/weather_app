@@ -309,7 +309,6 @@ body {
 }
 .main .bottom {
   width: 100%;
-  margin-top: 2.5rem;
 }
 .main__info-bottom {
   width: 100%;
@@ -411,7 +410,7 @@ body {
   }
 }
 .main__bottom {
-  height: 10rem;
+  height: 6rem;
   width: 12rem;
 }
 @media screen and (min-width: 46.75em) {

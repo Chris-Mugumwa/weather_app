@@ -309,7 +309,6 @@ body {
 }
 .main .bottom {
   width: 100%;
-  margin-top: 2.5rem;
 }
 .main__info-bottom {
   width: 100%;
@@ -411,7 +410,7 @@ body {
   }
 }
 .main__bottom {
-  height: 10rem;
+  height: 6rem;
   width: 12rem;
 }
 @media screen and (min-width: 46.75em) {
@@ -601,8 +600,4 @@ body {
   }
 }
 
-
-
-
-
-/*# sourceMappingURL=/main.443603a9.1237b812.08c00488.css.map */
+/*# sourceMappingURL=/src.a2b27638.css.map */

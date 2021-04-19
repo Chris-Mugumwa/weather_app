@@ -868,7 +868,7 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -900,7 +900,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -935,12 +935,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/app/app.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/app/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -968,7 +968,7 @@ var windDegree = document.querySelector('.wind--deg');
 var latCoord = document.querySelector('.coordinates--lat');
 var lonCoord = document.querySelector('.coordinates--lon');
 var finalUrl;
-var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var url = 'https://api.openweathermap.org/data/2.5/weather?q=';
 var destinationID;
 var appId = 'a16a8ef1f58973f765eaeb26936caac3';
 
@@ -982,7 +982,7 @@ var reqFunction = function reqFunction() {
 
   var fetchReq = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-      var temp, response, jsonResponse;
+      var temp, response, feelsLike, jsonResponse;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -1004,7 +1004,6 @@ var reqFunction = function reqFunction() {
 
             case 7:
               jsonResponse = _context.sent;
-              console.log(jsonResponse);
               location.innerText = inputField.value;
               location.style.transition = 'all .3s';
               temp = Math.floor(jsonResponse.main.temp - 273.15);
@@ -1012,14 +1011,15 @@ var reqFunction = function reqFunction() {
               degree.innerHTML = 'o';
               detail.classList.add('main__description');
               detail.innerText = jsonResponse.weather[0].description;
-              feelsDisplay.innerText = Math.floor(jsonResponse.main.feels_like - 273.15);
-              humidityDisplay.innerText = jsonResponse.main.humidity;
-              pressureDisplay.innerText = jsonResponse.main.pressure;
+              feelsLike = Math.floor(jsonResponse.main.feels_like - 273.15);
+              feelsDisplay.innerText = feelsLike;
+              humidityDisplay.innerText = jsonResponse.main.humidity + '%';
+              pressureDisplay.innerText = jsonResponse.main.pressure + 'Pa';
               placeCode.innerText = jsonResponse.sys.country;
-              windSpeed.innerText = jsonResponse.wind.speed;
-              windDegree.innerText = jsonResponse.wind.deg;
-              latCoord.innerText = jsonResponse.coord.lat;
-              lonCoord.innerText = jsonResponse.coord.lon;
+              windSpeed.innerText = jsonResponse.wind.speed + ' KT';
+              windDegree.innerText = jsonResponse.wind.deg + ' deg';
+              latCoord.innerText = jsonResponse.coord.lat + ' deg';
+              lonCoord.innerText = jsonResponse.coord.lon + ' deg';
 
             case 24:
               _context.next = 29;
@@ -1048,15 +1048,18 @@ exports.reqFunction = reqFunction;
 },{}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
-require("regenerator-runtime/runtime");
+var regeneratorRuntime = _interopRequireWildcard(require("../node_modules/regenerator-runtime/runtime.js"));
 
 require("./main.scss");
 
 var _app = require("./app/app");
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 (0, _app.reqFunction)();
-console.log('Test');
-},{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./main.scss":"src/main.scss","./app/app":"src/app/app.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../node_modules/regenerator-runtime/runtime.js":"node_modules/regenerator-runtime/runtime.js","./main.scss":"src/main.scss","./app/app":"src/app/app.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1084,7 +1087,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46399" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50745" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
